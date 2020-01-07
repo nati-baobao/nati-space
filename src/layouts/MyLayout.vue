@@ -1,24 +1,26 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          icon="menu"
-          aria-label="Menu"
-        />
+    
+   
+       <div class="row">
+                <q-tabs v-model="tab"  class="text-white  ">
+          <q-tab v-for="(item,index) in menu"  :key="index" :name="item.name" :label="item.name" 
+          
+          @click="go_to_page(item)"  />
+        </q-tabs>
+        <q-space/>
+           <div class="text-h6 q-mr-lg" style="height:44px;line-height:44px;">nati 成长空间</div>
+       </div>
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
+    
+
+
+      
+
     </q-header>
-
+    <!-- 
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
@@ -26,8 +28,8 @@
       content-class="bg-grey-2"
     >
       <q-list>
-        <q-item-label header>Essential Links</q-item-label>
-        <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
+        
+        <q-item clickable   >
           <q-item-section avatar>
             <q-icon name="school" />
           </q-item-section>
@@ -36,68 +38,38 @@
             <q-item-label caption>quasar.dev</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://github.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="code" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Github</q-item-label>
-            <q-item-label caption>github.com/quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://chat.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="chat" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Discord Chat Channel</q-item-label>
-            <q-item-label caption>chat.quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://forum.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="record_voice_over" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Forum</q-item-label>
-            <q-item-label caption>forum.quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://twitter.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="rss_feed" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Twitter</q-item-label>
-            <q-item-label caption>@quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://facebook.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="public" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Facebook</q-item-label>
-            <q-item-label caption>@QuasarFramework</q-item-label>
-          </q-item-section>
-        </q-item>
+  
       </q-list>
-    </q-drawer>
+    </q-drawer>-->
 
-    <q-page-container>
+    <q-page-container class="q-px-lg">
       <router-view />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
+import menu from "src/config/menu.js";
 export default {
-  name: 'MyLayout',
+  name: "MyLayout",
 
-  data () {
+  data() {
     return {
-      leftDrawerOpen: false
+      menu,
+      tab: "base"
+    };
+  },
+  created () {
+    this. go_to_page({
+      name:'base'
+    });
+  },
+  methods: {
+    go_to_page(item){
+      this.$router.push({
+        name:item.name
+      })
     }
-  }
-}
+  },
+};
 </script>
