@@ -1,22 +1,8 @@
-# Quasar App (nati-baobao)
-
-A Quasar Framework app
-
-## Install the dependencies
-```bash
-npm install
-```
-
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
 
 
-### Build the app for production
-```bash
-quasar build
-```
+nati 成长空间
+第一步： quasar build    构建打包当前 代码 
+第二步：sourcetree  提交代码 
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+备注： 如果有其他文件格式的 文档 放入 src/doc  文件夹 内 
+
