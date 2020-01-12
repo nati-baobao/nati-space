@@ -1,42 +1,88 @@
 <template>
-    <div class="post">
-        <h4>
-        javascript基础
-        </h4>
-        <h6>
-            javascript组成
-        </h6>
-<h6> .  ecmascript:解释器，翻译
-<p> .  dom  : document object model</p>
-<p> . bom : browser object model</p>
-<p>     -   各组成部分的前容性，前容性问题的由来</p>
-</h6>
+  <div class="post">
+    <h4>javascript基础</h4>javascript组成
+    . ecmascript:解释器，翻译
+    <p>. dom : document object model</p>
+    <p>. bom : browser object model</p>
+    <p>- 各组成部分的前容性，前容性问题的由来</p>
 
-<h4>变量类型(1)</h4>
-<p></p><h6>
-.类型：typeof运算符
-<p>. 用法： 返回值</p>
-.  常见的类型：-  number, string,undefined,object,function
-<p> . 一个变量应该只存放一种类型的数据</p>
-</h6>
-<h4>变量类型（2）</h4>
-<h6>.数据类型转换
-    <p> .计算两个文本框的和</p>
-<p>. 显示类型转换（强制类型转换）</p>
+    <h4>变量类型(1)</h4>.类型：typeof运算符
+    <p>. 用法： 返回值</p>. 常见的类型：- number, string,undefined,object,function
+    <p>. 一个变量应该只存放一种类型的数据</p>
 
+    <h4>变量类型（2）</h4>.数据类型转换
+    <p>.计算两个文本框的和</p>
+    <p>. 显示类型转换（强制类型转换）</p>- pars elnt(),parsefloat()
+    <p>-nan的意义和检测</p>
+    <p>. 隐式类型的转换</p>
+    <p>- = = , = = =</p>
+    <p>- 减法</p>
 
-</h6>
-    </div>
+    <h4>变量作用域和闭包</h4>
+    <p>. 变量和作用域（作用范围）</p>
+    <p>.局部的变量和全局的变量</p>
+    <p>. 什么是闭包？</p>.子函数可以使用父函数中的局部变量
+    <p>.之前一直在使用闭包</p>
+    <p>. 网上对于闭包的定义</p>
+
+    <h4>命名规范(1)</h4>
+
+    <p>.命名规范及必要性</p>
+    <p>. 可读性——————能看懂</p>
+    <p>.规范性——————符合规则</p>
+    <p>牙利命明法</p>
+    <p>.类型前缀</p>
+    <p>.首字母大写</p>
+
+    <h4>运算符</h4>
+    <p>. 算术 ： + 加， - 减， * 乘， / 除， % 取模</p>
+    <p>. 实例 ： 隔行变色 ，秒转时间</p>
+    <p>. 赋值：= ，+=， -= ，*= ， /= ，%=</p>
+    <p>. 关系：</p>
+    <p>. 逻辑： 与，｜｜或、！否</p>
+    <p>. 实例：全选与反选</p>
+    <p>. 运算符优先级：括号</p>
+    <div class></div>
+    <h4>程序流程控制</h4>
+    <p>判断：if、switch、？：</p>
+    <p>循环：while、for</p>
+    <p>跳出：break、continue</p>
+    <p>什么是真、什么是假：</p>
+    <p>. 真：true 、非零数字、非空字符串、非空对象</p>
+    <p>假：false、数字零、空字符串、空对象、undefined</p>
+    <h4>json</h4>
+    <p>.什么是json</p>
+    <p>.json和数组</p>
+    <p>.json和for in</p>
+    <h4>命名规范（2）</h4>
+
+    <p>类型：--------------前缀----------类型----------------实例</p>
+    <p>数组：----------------a------------array--------------altems</p>
+    <p>布尔值：--------------b------------boolean--------blscomplete</p>
+    <p>浮点数：--------------f------------float--------------fprice</p>
+    <p>函数：--------------fn-----------function-----------fnhandler</p>
+    <p>整数：---------------i------------lnteger------------iltemcount</p>
+    <p>对象：----------------o----------object------------odivl</p>
+    <p>正则表达式：----re-----------regexp-------------eenailcheck</p>
+    <p>字符串：--------s--------------string--------------susername</p>
+    <p>变体变量：------v--------------variant--------------vanything</p>
+    <h4>数组基础</h4>
+    <h5> .数组的使用</h5>
+    <p>.定义</p>
+    -var arr=[12,5,8,9];
+    <p>-var arr=new array（12，5，8，9）</p>
+    <p>-没有任何差别，[]的性能略高，因为代码短</p>
+    <h5>数组的属性</h5>
+    <p>length</p>
+    <p>-既可以获取，又可以设置</p>
+    <p>-例子：快速清空数组</p>
+    <h5>数组使用的原则：数组中应该只有一种类型的变量</h5>
+  </div>
 </template>
 
 <script>
- 
-    export default {
-      
-        
-    }
+export default {};
 </script>
 
 <style lang="scss" scoped>
-
 </style>
